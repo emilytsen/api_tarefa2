@@ -1,0 +1,31 @@
+@baseUrl = https://8080-emilytsen-apitarefa2-mm5mqhgqc1j.ws-us116.gitpod.io
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBUEkgVGFyZWZhcyIsInN1YiI6InVzdWFyaW8iLCJleHAiOjE3MjU0MDE4OTR9.ckDKS2Q9Xg12qBhQNexDX9RKcS08FOXupjyC8R1JCXI
+
+###
+GET {{baseUrl}}/tarefas
+Authorization: Bearer {{token}}
+
+###
+POST {{baseUrl}}/tarefas
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "descricao": "Criar Formulário",
+    "concluido": false
+}
+
+###
+GET {{baseUrl}}/tarefas/4
+
+###
+PUT {{baseUrl}}/tarefas/1
+Content-Type: application/json
+
+{
+    "descricao": "Testando Alteração",
+    "concluido": false
+}
+
+###
+DELETE {{baseUrl}}/tarefas/1
